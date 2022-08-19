@@ -305,7 +305,7 @@ This tutorial is divided into 2 parts.
 
 **Step 1:- Create .yml file for Pod definition**
 
-* In the below code, I have used `dhsoni-web` image i.e my portfolio website's image. You can choose any other image also.
+* In the below code, I have used `apotieri/full_pipeline_001` image i.e my portfolio website's image. You can choose any other image also.
   ```
   apiVersion: v1
   kind: Pod
@@ -316,7 +316,7 @@ This tutorial is divided into 2 parts.
   spec:
     containers:
       - name: mywebsite-container
-        image: dhruvin30/dhsoniweb
+        image: apotieri/full_pipeline_001
   ```
   
  **Step 2:- Create .yml file for Service definition**
@@ -363,8 +363,6 @@ This tutorial is divided into 2 parts.
 ansible-playbook <playbookname.yml>
 ```
 
-* After completion of play, you can check out the application by vising `ec2-ip:80` on the web browser. You should see output like below.
-
-![14](https://github.com/DhruvinSoni30/Terraform-EKS-Ansible/blob/main/14.png)
+* After completion of play, you can check out the application by vising `ec2-ip:80` on the web browser.
 
 That's it now, you have learned how to create the AWS EKS cluster using Terraform & How to create a Kubernetes application using Ansible. You can now play with it and modify it accordingly.
